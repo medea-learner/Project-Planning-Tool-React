@@ -2,7 +2,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 import { handleServerError, transformToCamelCase } from './utils.js';
 
-const API_BASE_URL = 'http://127.0.0.1:8000';
+const API_BASE_URL = 'https://mohamedder.pythonanywhere.com';
 
 export const getUserProjects = async () => {
   const accessToken = Cookies.get('accessToken');

@@ -10,7 +10,7 @@ export const setAuthToken = () => {
   };
 };
 
-const API_BASE_URL = 'http://127.0.0.1:8000';
+const API_BASE_URL = 'https://mohamedder.pythonanywhere.com';
 
 export const loginUser = (username, password) => async (dispatch) => {
   try {
@@ -18,8 +18,8 @@ export const loginUser = (username, password) => async (dispatch) => {
     const formData = new URLSearchParams();
     formData.append('grant_type', 'password');
     formData.append('username', username);
-    formData.append('client_id', process.env.PASSWORD_CLIENT_ID || 'client_id1');
-    formData.append('client_secret', process.env.PASSWORD_CLIENT_SECRET || 'client_secret');
+    formData.append('client_id', process.env.PASSWORD_CLIENT_ID || 't3kRmNm7mqd5QBYDno9HxAAPUvmuHHoj5Psr8BaF');
+    formData.append('client_secret', process.env.PASSWORD_CLIENT_SECRET || 't9K8EwOrQhqQ4MhE1savTxvGmbZAslGxe5vZZP7QlZMJcMjeru9LjMygkJURKmwZA9zIwVQh8M68hJA2DqG6f3MKQfC4v8BfwgKXwKesUAZy7Zik1WiAW09FgXQ1Lup2');
     formData.append('password', password);
 
     // Send POST request to authenticate

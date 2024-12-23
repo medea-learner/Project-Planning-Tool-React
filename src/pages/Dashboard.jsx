@@ -43,6 +43,15 @@ export default function Dashboard() {
   };
 
   const handleExportPdf = async (projectId) => {
+    Swal.fire({
+      title: 'Generating Pdf...',
+      text: 'Please wait while we generate the pdf file.',
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      didOpen: () => {
+        Swal.showLoading();
+      }
+    });
     try {
       const pdfBlob = await exportProjectPdf(projectId);
   
